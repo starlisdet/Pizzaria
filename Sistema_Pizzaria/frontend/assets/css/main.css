@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  padding-bottom: 30px;
+  position: relative;
+  min-height: 100%;
+  background-color: #EEE;
+}
+
+textarea {
+  resize: none;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+a {
+  transition: background 0.2s, color 0.2s;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color:#7D0F21 !important;
+  border: none;
+}
+
+#wrapper {
+  padding-left: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.close-sm {
+  display: none;
+}
+
+.money {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color:#fc1f44d4;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.27); 
+  box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.27);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+.sidebar-brand {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  text-align: center;
+  padding: 7px 0 0 0;
+}
+.sidebar-brand img {
+  margin: 0;
+  width: 200px;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 150px;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav > li {
+  text-indent: 10px;
+  line-height: 42px;
+}
+.sidebar-nav > li a {
+  display: block;
+  text-decoration: none;
+  color:#7D0F21;
+  font-weight: 400;
+  font-size: 16px;
+}
+.sidebar-nav > li > a:hover,
+.sidebar-nav > li.active > a {
+  text-decoration: none;
+  color: #EEE;
+  background: #7d0f21ba;
+}
+.sidebar-nav > li > a i.fa {
+  font-size: 21px;
+  width: 72px;
+}
+
+#navbar-wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+#wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+#navbar-wrapper .navbar {
+  border-width: 0 0 0 0;
+  background-color: #EEE;
+  font-size: 24px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+#navbar-wrapper .navbar a {
+  display: none;
+  color: #7D0F21;
+  margin-left: 15px;
+}
+#navbar-wrapper .navbar a:hover {
+  color: #7d0f21ac;
+}
+
+#navbar-wrapper .navbar-name {
+  display: flex;
+  align-items: center;
+}
+
+#navbar-wrapper p {
+  font-size: 14px;
+  color: #757575;
+  margin: 0;
+}
+
+#content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  top: 100px;
+  transition: .8s all;
+}
+
+#content-wrapper .content-title {
+  margin-left: 10px;
+  font-size: 22px;
+  color: #7D0F21;
+}
+
+#wrapper.toggled #content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-product {
+  width: 100%;
+  height: 230px;
+  min-height: 230px;
+  background-position: bottom;
+  background-image: url(../image/pizza_1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 9px 9px 0 0;
+  background-color: #383838;
+}
+
+.product .card{
+  margin: 10px;
+  width: 16rem;
+  min-height: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.27); 
+  box-shadow: 2px 5px 8px 0px rgba(0,0,0,0.27);
+}
+
+.product .card .card-body {
+  background-color: #fc1f44d4;
+  color: #EEE;
+  font-size: 13px;
+  border-radius: 0 0 9px 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product .card .card-body h5 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#clients  {
+  margin-left: 10px;
+}
+
+#clients th {
+  color: #7D0F21;
+}
+
+#clients tr {
+  padding-bottom: 10px;
+}
+
+td {
+  min-width: 180px;
+}
+
+@media (max-width: 646px) {
+  .product {
+    justify-content: center !important;
+  }
+
+  .product .card {
+    width: 18rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    width: 60px;
+  }
+  
+  #wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -190px;
+}
+  
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -190px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
+  #content-wrapper {
+    position: relative;
+    top: 9px;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  #navbar-wrapper .navbar a {
+    display: inline;
+  }
+}
+
+@media (max-width: 548px) {
+  #wrapper.toggled {
+    padding: 0 !important;
+  }
+
+  .close-sm {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .close-sm a {
+    z-index: 999;
+    color: #FFF;
+    margin-left: 15px;
+  }
+
+  #sidebar-wrapper {
+    background-color: #fc1f44;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #wrapper {
+    padding-left: 60px;
+  }
+
+  #sidebar-wrapper {
+    width: 60px;
+  }
+  
+#wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+  
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+  #content-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+  #content-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
+  }
+}
